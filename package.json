@@ -1,0 +1,30 @@
+{
+  "name": "construction-company-website-template",
+  "version": "1.0.0",
+  "description": "Construction Company one page website template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gakat/construction-company-onepage.git"
+  },
+  "author": "Gakat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gakat/construction-company-onepage/issues"
+  },
+  "homepage": "https://github.com/Gakat/construction-company-onepage#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp.spritesmith": "^6.9.0"
+  }
+}

@@ -1,0 +1,134 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$email-name: 'email';
+$email-x: 0px;
+$email-y: 0px;
+$email-offset-x: 0px;
+$email-offset-y: 0px;
+$email-width: 37px;
+$email-height: 37px;
+$email-total-width: 109px;
+$email-total-height: 74px;
+$email-image: '../images/icons.png';
+$email: (0px, 0px, 0px, 0px, 37px, 37px, 109px, 74px, '../images/icons.png', 'email', );
+$facebook-name: 'facebook';
+$facebook-x: 37px;
+$facebook-y: 0px;
+$facebook-offset-x: -37px;
+$facebook-offset-y: 0px;
+$facebook-width: 36px;
+$facebook-height: 37px;
+$facebook-total-width: 109px;
+$facebook-total-height: 74px;
+$facebook-image: '../images/icons.png';
+$facebook: (37px, 0px, -37px, 0px, 36px, 37px, 109px, 74px, '../images/icons.png', 'facebook', );
+$instagram-name: 'instagram';
+$instagram-x: 73px;
+$instagram-y: 0px;
+$instagram-offset-x: -73px;
+$instagram-offset-y: 0px;
+$instagram-width: 36px;
+$instagram-height: 37px;
+$instagram-total-width: 109px;
+$instagram-total-height: 74px;
+$instagram-image: '../images/icons.png';
+$instagram: (73px, 0px, -73px, 0px, 36px, 37px, 109px, 74px, '../images/icons.png', 'instagram', );
+$phone-name: 'phone';
+$phone-x: 36px;
+$phone-y: 37px;
+$phone-offset-x: -36px;
+$phone-offset-y: -37px;
+$phone-width: 36px;
+$phone-height: 36px;
+$phone-total-width: 109px;
+$phone-total-height: 74px;
+$phone-image: '../images/icons.png';
+$phone: (36px, 37px, -36px, -37px, 36px, 36px, 109px, 74px, '../images/icons.png', 'phone', );
+$twitter-name: 'twitter';
+$twitter-x: 0px;
+$twitter-y: 37px;
+$twitter-offset-x: 0px;
+$twitter-offset-y: -37px;
+$twitter-width: 36px;
+$twitter-height: 37px;
+$twitter-total-width: 109px;
+$twitter-total-height: 74px;
+$twitter-image: '../images/icons.png';
+$twitter: (0px, 37px, 0px, -37px, 36px, 37px, 109px, 74px, '../images/icons.png', 'twitter', );
+$spritesheet-width: 109px;
+$spritesheet-height: 74px;
+$spritesheet-image: '../images/icons.png';
+$spritesheet-sprites: ($email, $facebook, $instagram, $phone, $twitter, );
+$spritesheet: (109px, 74px, '../images/icons.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
