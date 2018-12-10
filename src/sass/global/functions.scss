@@ -1,0 +1,6 @@
+@import './global/vars';
+
+@function calculateRem($size) {
+  $remSize: $size / $fz-main;
+  @return #{$remSize}rem;
+}

@@ -1,0 +1,61 @@
+.home {
+  &__menu {
+    display: flex;
+    padding: 28px 0;
+  }
+
+  &__img {
+    display: inline-block;
+  }
+
+  &__form-box {
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 0;
+  }
+}
+
+.quote-form {
+  height: 66%;
+  width: 396px;
+  margin-left: auto;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.13);
+  background-color: #fff;
+
+  &__title {
+    color: $color-primary;
+    font-weight: normal;
+    line-height: 1.08;
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  &__input {
+    margin: 0.5rem 0;
+    line-height: 1.4;
+    color: #ffbfbf;
+    border: 1px solid #ffb8b8; 
+    border-radius: 2px;
+    padding: 0.55rem 1.1rem;
+  }
+
+  &__message {
+    resize: vertical;
+    min-height: 4rem;
+  }
+
+  &__submit {
+    align-self: center;
+    height: 2rem;
+    width: 40%;
+    border-radius: 1rem;
+    line-height: 1;
+    background-color: $color-primary;
+    letter-spacing: 1.8px;
+    color: #fff;
+  }
+}

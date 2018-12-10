@@ -1,0 +1,23 @@
+.navigation {
+  display: inline-block;
+  &__list {
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+
+  &__item {
+    display: inline;
+    margin-right: 40px;
+    line-height: 1.2;
+    font-size: calculateRem(22px);
+  }
+}
+
+.login {
+  display: inline;
+  margin-left: auto;
+  margin-right: 1rem;
+  line-height: 1.2;
+  font-size: calculateRem(22px);
+}

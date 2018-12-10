@@ -1,7 +1,11 @@
+@import 'global/vars';
+@import 'global/functions';
+@import 'global/mixins';
+@import 'global/common';
 @import 'global/icons';
 
-.hello {
-  font-weight: bold;
-  font-size: 24px;
-  color: red;
-}
+@include sprites($spritesheet-sprites);
+
+@import 'sections/header';
+@import 'sections/navigation';
+@import 'sections/home';

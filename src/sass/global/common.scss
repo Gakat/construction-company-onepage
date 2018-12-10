@@ -1,0 +1,31 @@
+%vertical-align {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+:root {
+  font-size: $fz-main;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-size: calculateRem(24px);
+  margin: 0;
+}
+
+.page-row {
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 130px;
+  }
+
+  &--shadow {
+    position: relative;
+    box-shadow: -2.5px 4.3px 7px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &--bg-blue {
+    background-color: #e8fdff;
+  }
+}

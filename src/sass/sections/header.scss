@@ -1,0 +1,30 @@
+.header {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.contacts {
+  margin-left: auto;
+
+  &__box {
+    display: inline-block;
+    margin-right: calculateRem(50px);
+    
+  }
+
+  &__icon {
+    @extend %vertical-align;
+    margin-right: calculateRem(12px);
+  }
+  &__info {
+    @extend %vertical-align;
+  }
+}
+
+.social {
+  &__icon {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+}
