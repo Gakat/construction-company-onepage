@@ -1,0 +1,19 @@
+.contact-us {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem;
+  font-size: calculateRem(30px);
+  letter-spacing: 3px;
+  
+  &__text {
+    color: #fff;
+  }
+  &__button {
+    color: #323232;
+    background-color: #fff;
+    padding: 0.6rem 1.6rem;
+    border-radius: 28px;
+    text-decoration: none;
+  }
+}

@@ -13,7 +13,7 @@ const gulp          = require('gulp'),
 gulp.task('server', function(){
   browserSync.init({
     server: {
-        port: 9000,
+        port: 3111,
         baseDir: "build"
     }
   });
@@ -35,6 +35,11 @@ gulp.task('styles:compile', function(){
       cascade: false}))
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('build/styles'));
+});
+
+gulp.task('js:compile', function(){
+  return gulp.src('src/js/main.js')
+          .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('imagemin', function(){
@@ -79,11 +84,12 @@ gulp.task('copy:normalize', function(){
 gulp.task('watch', function(){
   gulp.watch('src/templates/**/*.pug', gulp.series('templates:compile'));
   gulp.watch('src/sass/**/*.scss', gulp.series('styles:compile'));
+  gulp.watch('src/js/**/*.js', gulp.series('js:compile'));
 });
 
 gulp.task('dev', gulp.series(
   'clean:build',
-  gulp.parallel('templates:compile', 'styles:compile', 'imagemin', 'copy:companies', 'copy:normalize', 'sprites:compile'),
+  gulp.parallel('templates:compile', 'styles:compile', 'js:compile', 'imagemin', 'copy:companies', 'copy:normalize', 'sprites:compile'),
   gulp.parallel('watch', 'server')
   )
 );

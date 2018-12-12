@@ -1,0 +1,25 @@
+.clients {
+  padding: 2.5rem 0;
+  text-align: center;
+  color: #323232;
+
+  &__title {
+    letter-spacing: 9.2px;
+  }
+
+  &__slogan {
+    line-height: 1.33;
+    letter-spacing: 3.6px;
+    margin-bottom: 2rem;
+  }
+
+  &__logo-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 100%;
+  }
+}

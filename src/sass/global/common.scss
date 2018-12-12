@@ -44,4 +44,128 @@ h3 {
   &--bg-red {
     background-color: $color-primary;
   }
+
+  &--bg-gray {
+    background-color: #eee;
+  }
+
+  &--bg-dark-gray {
+    background-color: #323232;
+  }
+}
+
+.navigation {
+  display: inline-block;
+  &__list {
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+
+  &__item {
+    display: inline;
+    margin-right: 40px;
+    line-height: 1.2;
+    font-size: calculateRem(22px);
+  }
+}
+
+.login {
+  display: inline;
+  margin-left: auto;
+  margin-right: 1rem;
+  line-height: 1.2;
+  font-size: calculateRem(22px);
+}
+
+.social {
+  &__icon {
+    display: inline-block;
+  }
+
+  &--left-margin {
+    margin-left: 1rem;
+  }
+}
+
+.split-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+
+  &--left {
+    position: absolute;
+    left: 0;
+  }
+  
+  &--right {
+    position: absolute;
+    right: 0;
+  }
+
+  &__image {
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.13);
+    border-radius: 0.5rem;
+  }
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  width: 44%;
+  border-radius: 2px;
+  padding: 2rem 1.5rem;
+  z-index: 2;
+
+  &__title {
+    font-size: calculateRem(24px);
+    color: $color-primary;
+  }
+
+  &__title--color-dark {
+    color: #323232;
+  }
+
+  &__line {
+    border-bottom: $color-primary solid .1em;
+    width: 230px;
+    margin: 0.5rem 0 1rem;
+
+    &--short {
+      width: 115px;
+    }
+
+    &--thick {
+      border-width: 2px;
+    }
+  }
+
+  &__caption {
+    line-height: 1.44;
+  }
+
+  &__link {
+    display: inline-table;
+    margin-top: 1rem;
+    padding: .45rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: $color-primary;
+
+    &--border-red {
+      border: $color-primary solid .1em;
+    }
+
+    &--bg-red {
+      color: #fff;
+      background-color: $color-primary;
+      border: $color-primary solid .1em;
+    }
+  }
+
+  &--bg-white {
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  }
 }

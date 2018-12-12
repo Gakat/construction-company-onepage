@@ -7,6 +7,9 @@
 @include sprites($spritesheet-sprites);
 
 @import 'sections/header';
-@import 'sections/navigation';
 @import 'sections/home';
 @import 'sections/projects';
+@import 'sections/services';
+@import 'sections/clients';
+@import 'sections/contact-us';
+@import 'sections/footer';
